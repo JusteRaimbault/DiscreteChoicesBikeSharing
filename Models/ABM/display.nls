@@ -1,0 +1,56 @@
+;;;;;;;;;;;;;;;;;
+;; Display functions
+;;;;;;;;;;;;;;;;;
+
+
+
+to display-step
+  display-load-factors
+end
+
+
+
+to setup-display
+  ;gis:set-drawing-color red
+  ;gis:draw stations-layer-data 2
+  gis:set-drawing-color blue
+  gis:draw paths-layer-data 1
+  
+  ask vertices [set hidden? true] ask paths [set hidden? true]
+end
+
+
+
+to display-network
+  ask vertices [set hidden? true]
+  ask paths [set color blue set thickness 0.2]
+end
+
+
+
+to color-destination-probas [time]
+  let k 0
+  foreach destination-probas [
+     let prob item time ?
+     let i floor (k / data-width-steps)
+     let j remainder k data-width-steps
+     ask patch min list (world-width - 1) floor (i * world-width / data-width-steps)  min list (world-height - 1) floor (j * world-height / data-width-steps) [ask patches in-radius 20 [set pcolor scale-color red prob 0 1 ]]
+     set k k + 1
+  ]
+  
+end
+
+
+to display-load-factors
+  ask stations [let c gradient:scale [[0 255 0][255 0 0]] load-factor 0 1 ask patches in-radius 10 [set pcolor c]]
+end
+
+to display-real-load-factors [time]
+  let i 0
+  foreach real-load-factors [
+    ask one-of stations with [id = item i first stations-characs][
+      let c gradient:scale [[0 255 0][255 0 0]] item time ? 0 1 ask patches in-radius 10 [set pcolor c]
+    ]
+    set i i + 1
+  ]
+end

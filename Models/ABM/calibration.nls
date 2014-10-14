@@ -1,0 +1,74 @@
+;;;;;;;;;;;;;;
+;; Specific procedure for calibration
+;;;;;;;;;;;;;;
+
+
+
+
+
+
+
+
+to setup-calibration
+   ;; hand setup of param space
+   set calibration-parameters-names ["mean-tolerance-radius" "info-proportion" "kernel-size"]
+   set calibration-parameters-bounds [[300 600][0 100][20 100]]
+   set calibration-parameters-steps [20 10 20]
+    
+end
+
+
+
+
+;;;;;;;
+;; Generic subprocess to be called both by NL calib procedure
+;; and python cloning algo
+;;
+;; Computes local values of MSE in grid neighborhood of given point
+;; Returns map of values.
+;;  - input point as list of values
+;;
+;;  - param-names as global
+;;  - variable-steps as globals
+;; 
+;;;;;;;;;;;;;;
+
+to compute-local-mse-gradient [n-repets parameter-values]
+  
+  ;; Needs a security check on param-values
+  ;; as the function can be called externally
+  if (length parameter-values != length calibration-parameters-names) [
+     error "Wrong call to gradient function (param number)"
+  ]
+  
+  ;;let construct a local grid plan from values
+  ;; a bit of work to build from values list
+  ;; (to be more flexible with external calls)
+  
+  ;;
+  ;; BEWARE : number of points ?
+  
+  let param-names-and-bounds [] let i 0
+  foreach parameter-values [
+     let step (item i calibration-parameters-steps)
+     set param-names-and-bounds lput (list (item i calibration-parameters-names) (? - step) (? + step) step)  param-names-and-bounds
+     set i i + 1
+  ]
+  
+  let points grid-experience-plan param-names-and-bounds
+  
+  let values table:make
+  
+  foreach points [
+    
+    ;; setup parameters
+    
+    ;; exploration setup
+    
+    ;; go number of repets
+    
+    
+     
+  ]
+  
+end

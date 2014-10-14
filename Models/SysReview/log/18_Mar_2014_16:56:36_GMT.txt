@@ -1,0 +1,1 @@
+Parsing Bibtex file : /Users/Juste/Documents/Cours/HSSVTT/Project/Data/corpus/bibtex/corpus.bib

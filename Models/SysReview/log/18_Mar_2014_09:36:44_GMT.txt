@@ -1,0 +1,2 @@
+Parsing Bibtex file : data/exportlist.bib
+Loading Keywords from file data/keywords.txt

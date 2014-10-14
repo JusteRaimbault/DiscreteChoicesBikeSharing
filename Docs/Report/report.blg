@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: report.aux
+The style file: apalike.bst
+Database file #1: /Users/Juste/Documents/Cours/PIL/DiscreteChoicesBikeSharing/Biblio/bikesDiscreteChoices.bib
+Database file #2: /Users/Juste/Documents/ComplexSystems/Biblio/Bibtex/global.bib
+Database file #3: /Users/Juste/Documents/ComplexSystems/Biblio/Culture/Bibtex/culture.bib
+Database file #4: /Users/Juste/Documents/ComplexSystems/CityBikes/Biblio/bibtex.bib
+Repeated entry---line 285 of file /Users/Juste/Documents/ComplexSystems/CityBikes/Biblio/bibtex.bib
+ : @article{midgley2009role
+ :                         ,
+I'm skipping whatever remains of this entry
+Database file #5: /Users/Juste/Documents/Cours/TheoreticalAnalysisComplexSystems/Project/Biblio/biblio.bib
+Repeated entry---line 46 of file /Users/Juste/Documents/Cours/TheoreticalAnalysisComplexSystems/Project/Biblio/biblio.bib
+ : @inproceedings{tailleur2009simulation
+ :                                      ,
+I'm skipping whatever remains of this entry
+Database file #6: /Users/Juste/Documents/ComplexSystems/Misc/DynamiteSSchool2014/Biblio/dynamite.bib
+Warning--there's a number but no series in bierlaire2006biogeme
+Warning--empty journal in karatzoglou2004kernlab
+Warning--empty journal in lu2013package
+Warning--empty journal in mitra2010comparison
+Warning--empty journal in tsybakov2004introduction
+You've used 42 entries,
+            1935 wiz_defined-function locations,
+            705 strings with 12235 characters,
+and the built_in function-call counts, 16040 in all, are:
+= -- 1537
+> -- 705
+< -- 25
++ -- 248
+- -- 236
+* -- 1345
+:= -- 2851
+add.period$ -- 125
+call.type$ -- 42
+change.case$ -- 323
+chr.to.int$ -- 40
+cite$ -- 47
+duplicate$ -- 630
+empty$ -- 1109
+format.name$ -- 292
+if$ -- 3093
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 42
+newline$ -- 209
+num.names$ -- 126
+pop$ -- 314
+preamble$ -- 1
+purify$ -- 325
+quote$ -- 0
+skip$ -- 451
+stack$ -- 0
+substring$ -- 945
+swap$ -- 62
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 248
+warning$ -- 5
+while$ -- 124
+width$ -- 0
+write$ -- 530
+(There were 2 error messages)

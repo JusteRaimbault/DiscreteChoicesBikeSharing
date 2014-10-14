@@ -1,0 +1,124 @@
+This is TeX, Version 3.14159 (Web2C 7.3.7x) (format=latex 2010.11.17)  1 JUL 2011 15:18
+**template
+(./template.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, french, ukenglish, polish, loaded.
+(./svjour.cls
+Document Class: svjour 1997/11/17 
+LaTeX document class for Springer journals - version 1.1
+(./svepjH.clo
+File: svepjH.clo 2006/9/9 v1 style option for The European Physical Journal H
+
+Class option: svepjH.clo for The European Physical Journal H
+)
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 90.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 92.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 93.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 94.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 95.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 98.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 99.
+\logodepth=\dimen102
+\headerboxheight=\dimen103
+\betweenumberspace=\dimen104
+\aftertext=\dimen105
+\headlineindent=\dimen106
+\c@inst=\count79
+\c@auth=\count80
+\instindent=\dimen107
+\authrun=\box26
+\authorrunning=\toks14
+\titrun=\box27
+\titlerunning=\toks15
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@theorem=\count86
+\c@case=\count87
+\c@conjecture=\count88
+\c@corollary=\count89
+\c@definition=\count90
+\c@example=\count91
+\c@exercise=\count92
+\c@lemma=\count93
+\c@note=\count94
+\c@problem=\count95
+\c@property=\count96
+\c@proposition=\count97
+\c@question=\count98
+\c@solution=\count99
+\c@remark=\count100
+\c@figure=\count101
+\c@table=\count102
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\figcapgap=\dimen108
+\tabcapgap=\dimen109
+\figgap=\dimen110
+\bibindent=\dimen111
+\@tempcntc=\count103
+) (/usr/local/TeX/TL7/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/TeX/TL7/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/local/TeX/TL7/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/TeX/TL7/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/TeX/TL7/texmf/tex/latex/texlive/graphics.cfg
+File: graphics.cfg 2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 80.
+
+(/usr/local/TeX/TL7/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+) (./template.aux)
+\openout1 = `template.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 27.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 27.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 27.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 27.
+
+[1] [2] (./template.aux) ) 
+Here is how much of TeX's memory you used:
+ 781 strings out of 50819
+ 8521 string characters out of 1195003
+ 56691 words of memory out of 1500001
+ 3760 multiletter control sequences out of 10000+15000
+ 9588 words of font info for 34 fonts, out of 400000 for 1000
+ 34 hyphenation exceptions out of 1000
+ 27i,7n,24p,197b,306s stack positions out of 1500i,500n,1500p,200000b,5000s
+
+Output written on template.dvi (2 pages, 2264 bytes).
