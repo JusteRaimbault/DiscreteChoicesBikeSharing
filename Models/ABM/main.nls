@@ -87,8 +87,14 @@ to finish-travels
         ][
         ;;or reroute to another station
         set redirected? true
-        set visited-stations lput possible-deposit-station visited-stations
-        reroute-to-station
+        
+        ;; discrete choice : go to another station or wait here.
+        let choice dc-choice
+        
+        if choice = 1 [
+          set visited-stations lput possible-deposit-station visited-stations
+          reroute-to-station
+        ]
         ]
       ]
       [

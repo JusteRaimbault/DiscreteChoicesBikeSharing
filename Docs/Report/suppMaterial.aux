@@ -1,0 +1,79 @@
+\relax 
+\citation{parkin2008estimation}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Discrete Choice Questionnaire}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Data structure and description}{1}}
+\@writefile{toc}{\contentsline {subsubsection}{Socio-economic variables\vspace  \bigskipamount \\}{1}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Descriptive statistics of socio-economic variables. For dummies or booleans, quantile have no sense but mean gives naturally proportion of corresponding category.\relax }}{2}}
+\@writefile{toc}{\contentsline {subsubsection}{Attributes of scenarii\vspace  \bigskipamount \\}{2}}
+\@writefile{toc}{\contentsline {subsubsection}{Descriptive statistics\vspace  \bigskipamount \\}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Online Questionnaire Application Architecture and implementation}{2}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Data collecting shell script.  Unique file identifier is created by epoch date, calling the \texttt  {date} utility (echoing e.g. the number 1417980916 with the \texttt  {\%s} option). Data is then collected and stored directly in file by a simple \texttt  {curl} request in GET mode (\texttt  {-G} option). API website returns json file of the specified contract (Paris in our case) if the user api key is valid (key is here stored in an external file and paste by \texttt  {cat}.\relax }}{3}}
+\newlabel{code:datacollection}{{2}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Modeling}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{Full model}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Data on system dynamics}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Data Collection}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Homepage of online questionnaire (including first part of the questionnaire).\relax }}{4}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:modelinterface}{{1}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Second part of the questionnaire : scenarii and modal choices.\relax }}{5}}
+\newlabel{fig:modelinterface}{{2}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Management page of online questionnaire.\relax }}{6}}
+\newlabel{fig:modelinterface}{{3}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Capture of the database (through phpMyadmin mysql manager application).\relax }}{7}}
+\newlabel{fig:modelinterface}{{4}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Daily data archiving shell script.  We name the archive by the epoch date of archiving. The following loop aims to wait for any possible data collection in progress to be achieved, by listing and filtering by name the processes. We can then zip the daily data directory, remove it, and create a new empty directory for the next day.\relax }}{8}}
+\newlabel{code:dataarchiving}{{3}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Description}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Remote data collection shell script.  This script is client-side and aims to collect and process remote raw data. File to be collected on the remote server are stored in a file (created manually for more flexibility). They are downloaded, unzipped and R script transforming heavy json into lightweight csv is called.\relax }}{9}}
+\newlabel{code:datagetremote}{{4}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Agent-Based Modeling}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Evaluation criteria}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Example of time-series of available bikes at different docking stations. First is a typical work area station, as number of bikes increase in the morning, to fall to quasi null in the afternoon. Second is more complicated and may be an hybrid area. The two other are zones were flux are very high, as dropped bikes directly disappear.\relax }}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Spatial representation of the system, including street network (blue) and docking stations (red).\relax }}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Construction of GIS data for a particular district. We extract the sublayer of roads (keeping all hirearchy levels in such a size of district), docking stations, and boundaries that has to be manually constructed (it is then used to determine in- and outpoints by intersecting with street network).\relax }}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{Temporal evaluation functions\vspace  \bigskipamount \\}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{Aggregated evaluation functions\vspace  \bigskipamount \\}{12}}
+\citation{jensen2010characterizing}
+\citation{o2013mining}
+\citation{nair2013large}
+\citation{NetLogo}
+\citation{QGIS_software}
+\citation{R}
+\citation{thiele2012agent}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Model Parametrization}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Model Implementation}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{Languages\vspace  \bigskipamount \\}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{Architecture\vspace  \bigskipamount \\}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Model application}{14}}
+\@writefile{toc}{\contentsline {subsubsection}{Internal consistence of the model\vspace  \bigskipamount \\}{14}}
+\@writefile{toc}{\contentsline {subsubsection}{Investigation of user-based strategies\vspace  \bigskipamount \\}{14}}
+\@writefile{toc}{\contentsline {subsubsection}{Influence of walking radius}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Capture of the NetLogo model interface.\relax }}{15}}
+\newlabel{fig:modelinterface}{{8}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Example of output time series for evaluation functions of the model, on a 24 hours single run. Here, tunable parameters are typically low ($p_{info}=10,r=50$) and discrete choice parameters are fixed.\relax }}{16}}
+\newlabel{fig:modelinterface}{{9}{16}}
+\@writefile{toc}{\contentsline {subsubsection}{Influence of information}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Model Calibration}{16}}
+\bibstyle{apalike}
+\bibdata{/Users/Juste/Documents/Cours/PIL/DiscreteChoicesBikeSharing/Biblio/bikesDiscreteChoices,/Users/Juste/Documents/ComplexSystems/Biblio/Bibtex/global,/Users/Juste/Documents/ComplexSystems/Biblio/Culture/Bibtex/culture,/Users/Juste/Documents/ComplexSystems/CityBikes/Biblio/bibtex,/Users/Juste/Documents/Cours/TheoreticalAnalysisComplexSystems/Project/Biblio/biblio,/Users/Juste/Documents/ComplexSystems/Misc/DynamiteSSchool2014/Biblio/dynamite}
+\bibcite{jensen2010characterizing}{Jensen et\nobreakspace  {}al., 2010}
+\bibcite{nair2013large}{Nair et\nobreakspace  {}al., 2013}
+\bibcite{o2013mining}{O'Brien et\nobreakspace  {}al., 2013}
+\bibcite{parkin2008estimation}{Parkin et\nobreakspace  {}al., 2008}
+\bibcite{QGIS_software}{{QGIS Development Team}, 2009}
+\bibcite{R}{{R Core Team}, 2013}
+\bibcite{thiele2012agent}{Thiele et\nobreakspace  {}al., 2012}
+\bibcite{NetLogo}{Wilensky, 1999}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Other example of run with higher values of parameters ($p_{info}=40,r=150$). We observe differences but of small magnitude. Final heterogeneity is smaller, meaning this case is more performant in that sense. Also, more travel are done since people are more about to walk to start a travel, what means also less adverse events, what we can see on the evening period. The order of magnitude of differences confirms that the data-driven character of the model strongly governs its behavior, since patterns depend on the first order of spatial geometry and temporal evolution of parametrization time-series.\relax }}{17}}
+\newlabel{fig:modelinterface}{{10}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Statistical analysis of outputs.  For some aggregated outputs (here the overall quantity of detours and the proportion of adverse events), we plotted histograms of the statistical distribution of the functions on many realizations of the model for a point in the parameter space. Two points of the parameter space, corresponding to $(r=300,p_{info}=50,\sigma =80)$ (green histogram) and $(r=700,p_{info}=50,\sigma =80)$ (red) are plotted here as examples. Gaussian fits are also drawn. The relative good fit shows the internal consistence of the model and we are able to quantify the typical number of repetitions needed when applying the model : supposing normal distributions for the indicator and its mean, a 95\% confidence interval of size $\sigma /2$ is obtained with $n=(2\cdot 2\sigma \mskip -\thinmuskip \cdot \mskip -\thinmuskip 1.96/\sigma )^2\approx 60$ \relax }}{18}}
+\newlabel{fig:3}{{11}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Results on the influence of walking radius.\relax }}{18}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Time series of heterogeneity indicator $h(t)$ for different values of walking radius. Small differences between means could mislead to a positive effect of radius on heterogeneity, but the error bars of all curves recover themselves, what makes any conclusion non-significant.}}}{18}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Influence of walking radius on the quantity of adverse events $A$. After 400m, we observe a relative decrease of the proportion. However, values under 300-400m should be ignored since these are smaller than the mean distance of a random point to a station.}}}{18}}
+\newlabel{fig:5}{{12}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Results on the influence of proportion of information.\relax }}{19}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Influence of proportion of information on adverse events $A$ for two different values of walking radius. We can conclude significantly that the information has a positive influence. Quantitatively, we extract the threshold of 35\% that corresponds to the majority of decrease, that means that more is not necessarily needed.}}}{19}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Influence of information on quantity of detours $D_{tot}$. Curves for $r=300m$ and $r=700m$ are shown (scale color). Here also, the influence is positive. The effect is more significant for high values of walking radius. The inflection is around 50\% of users informed, what is more than for adverse events.}}}{19}}
+\newlabel{fig6}{{13}{19}}

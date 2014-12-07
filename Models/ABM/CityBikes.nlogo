@@ -165,14 +165,30 @@ globals [
   ;;;;;;;;;;;
   
   ;; list of parameters (names) used in calib procedure
+  ;; List<String>
   calibration-parameters-names
   
   ;; list of parameters steps
+  ;; List<double>
   calibration-parameters-steps
   
   ;;list of param bounds
+  ;; List<List<double>>
   calibration-parameters-bounds
  
+  ;; table of objective values (to be be reused)
+  ;; Parameter values are mapped to list of values on repetitions
+  ;; Table<List<double>->List<double>>
+  calibration-objective-values
+  
+  
+  ;;;;;;;;;;;
+  ;; DC vars
+  ;;;;;;;;;;;
+  
+  ;; mean waiting time at a docking station
+  ;; double
+  mean-waiting-time
  
 ]
 
@@ -398,7 +414,7 @@ cluster-treshold
 cluster-treshold
 0
 10
-4.7
+8.3
 0.1
 1
 NIL
@@ -583,25 +599,25 @@ PENS
 "pen-1" 1.0 0 -7500403 true "" "plot current-out-travel-count"
 
 SLIDER
-9
-346
-179
-379
+2
+338
+130
+371
 mean-tolerance-radius
 mean-tolerance-radius
 0
 1000
-361
+362
 1
 1
 m
 HORIZONTAL
 
 SLIDER
-9
-382
-181
-415
+2
+374
+131
+407
 info-proportion
 info-proportion
 0
@@ -613,10 +629,10 @@ info-proportion
 HORIZONTAL
 
 TEXTBOX
-12
-325
-162
-343
+5
+317
+155
+335
 Runtime params
 12
 0.0
@@ -668,9 +684,9 @@ PENS
 
 BUTTON
 147
-434
+487
 247
-467
+520
 NIL
 go-for-one-day
 NIL
@@ -737,6 +753,36 @@ false
 "" ""
 PENS
 "default" 1.0 0 -16777216 true "" "plot heterogeneity"
+
+SLIDER
+132
+339
+256
+372
+beta-waiting
+beta-waiting
+-1
+0
+-0.06
+0.01
+1
+NIL
+HORIZONTAL
+
+SLIDER
+133
+375
+257
+408
+beta-moving
+beta-moving
+-1
+0
+-0.16
+0.01
+1
+NIL
+HORIZONTAL
 
 @#$#@#$#@
 ## WHAT IS IT?

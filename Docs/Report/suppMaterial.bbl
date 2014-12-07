@@ -1,0 +1,48 @@
+\begin{thebibliography}{}
+
+\bibitem[Jensen et~al., 2010]{jensen2010characterizing}
+Jensen, P., Rouquier, J.-B., Ovtracht, N., and Robardet, C. (2010).
+\newblock Characterizing the speed and paths of shared bicycle use in lyon.
+\newblock {\em Transportation research part D: transport and environment},
+  15(8):522--524.
+
+\bibitem[Nair et~al., 2013]{nair2013large}
+Nair, R., Miller-Hooks, E., Hampshire, R.~C., and Bu{\v{s}}i{\'c}, A. (2013).
+\newblock Large-scale vehicle sharing systems: Analysis of v{\'e}lib'.
+\newblock {\em International Journal of Sustainable Transportation},
+  7(1):85--106.
+
+\bibitem[O'Brien et~al., 2013]{o2013mining}
+O'Brien, O., Cheshire, J., and Batty, M. (2013).
+\newblock Mining bicycle sharing data for generating insights into sustainable
+  transport systems.
+\newblock {\em Journal of Transport Geography}.
+
+\bibitem[Parkin et~al., 2008]{parkin2008estimation}
+Parkin, J., Wardman, M., and Page, M. (2008).
+\newblock Estimation of the determinants of bicycle mode share for the journey
+  to work using census data.
+\newblock {\em Transportation}, 35(1):93--109.
+
+\bibitem[{QGIS Development Team}, 2009]{QGIS_software}
+{QGIS Development Team} (2009).
+\newblock {\em QGIS Geographic Information System}.
+\newblock Open Source Geospatial Foundation.
+
+\bibitem[{R Core Team}, 2013]{R}
+{R Core Team} (2013).
+\newblock {\em R: A Language and Environment for Statistical Computing}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria.
+
+\bibitem[Thiele et~al., 2012]{thiele2012agent}
+Thiele, J.~C., Kurth, W., and Grimm, V. (2012).
+\newblock Agent-based modelling: Tools for linking netlogo and r.
+\newblock {\em Journal of Artificial Societies and Social Simulation}, 15(3):8.
+
+\bibitem[Wilensky, 1999]{NetLogo}
+Wilensky, U. (1999).
+\newblock Netlogo.
+\newblock Center for Connected Learning and Computer-Based Modeling,
+  Northwestern University, Evanston, IL.
+
+\end{thebibliography}

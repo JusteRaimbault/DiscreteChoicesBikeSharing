@@ -74,6 +74,7 @@ to setup-world-and-vars
   set mean-biker-speed 300
   set mean-walker-speed 50
   
+  set mean-waiting-time 5 ;in minutes
   
   set departure-queue []
   

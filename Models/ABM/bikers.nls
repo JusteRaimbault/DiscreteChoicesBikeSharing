@@ -280,6 +280,31 @@ to end-travel
   die
 end
 
-
+;;;;;;;; discrete choice probability
+to-report dc-choice
+  let o one-of vertices with-min [distance myself]
+  let d nobody
+  let um 0 let uw 0
+  ifelse has-information? [
+    ;;both finds -> where there is place; and the closest !
+    let possibles (stations with [capacity - standing-bikes > 0])    
+    ;;if no station, have to get out of the zone
+    ifelse count possibles = 0 [let io one-of io-vertices set d one-of cached-vertices with-min [distance io] set out-travel? true]
+    [let s first sort-on [distance myself] possibles set d one-of vertices with-min [distance s]]
+    set uw beta-waiting * mean-waiting-time + beta-moving * (distance current-objective)
+    set um beta-waiting * (distance d)/ mean-biker-speed + beta-moving * ([distance d] of current-objective)
+  ][
+    ;;no info: that's where tolerance radius appears
+    let s one-of (stations in-radius (tolerance-radius / real-patch-size)) with [distance myself > 5 and not member? self [visited-stations] of myself] if s = nobody [set s one-of stations]
+    set d one-of vertices with-min [distance s]
+    set uw beta-waiting * mean-waiting-time 
+    set um beta-waiting * (distance d)/ mean-biker-speed ; mean distance theoretocally
+  ]
+  
+  let p exp (- uw) / (exp(- uw)+ exp(- um)) 
+  ifelse random-float 1 < p [report 0]
+  [report 1]
+end
+  
 
 

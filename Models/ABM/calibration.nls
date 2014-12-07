@@ -1,5 +1,5 @@
 ;;;;;;;;;;;;;;
-;; Specific procedure for calibration
+;; Specific procedures for Gradient descent calibration
 ;;;;;;;;;;;;;;
 
 
@@ -14,9 +14,16 @@ to setup-calibration
    set calibration-parameters-names ["mean-tolerance-radius" "info-proportion" "kernel-size"]
    set calibration-parameters-bounds [[300 600][0 100][20 100]]
    set calibration-parameters-steps [20 10 20]
-    
+   set calibration-objective-values table:make
 end
 
+
+
+
+to run-calibration
+  
+
+end
 
 
 
@@ -28,12 +35,12 @@ end
 ;; Returns map of values.
 ;;  - input point as list of values
 ;;
-;;  - param-names as global
-;;  - variable-steps as globals
+;;  - calibration-parameters-names as global
+;;  - calibration-parameters-steps as global
 ;; 
 ;;;;;;;;;;;;;;
 
-to compute-local-mse-gradient [n-repets parameter-values]
+to-report compute-local-mse-values [n-repets parameter-values]
   
   ;; Needs a security check on param-values
   ;; as the function can be called externally
@@ -46,29 +53,62 @@ to compute-local-mse-gradient [n-repets parameter-values]
   ;; (to be more flexible with external calls)
   
   ;;
-  ;; BEWARE : number of points ?
-  
-  let param-names-and-bounds [] let i 0
+  ;; BEWARE : number of points ? == 2*d + 1
+  ;;  -> not on a complete grid
+
+  let i 0
+  let points (list parameter-values)
   foreach parameter-values [
      let step (item i calibration-parameters-steps)
-     set param-names-and-bounds lput (list (item i calibration-parameters-names) (? - step) (? + step) step)  param-names-and-bounds
+     set points lput (replace-item i parameter-values (? + step)) (lput (replace-item i parameter-values (? - step)) points)
      set i i + 1
   ]
+  ;let points grid-experience-plan param-names-and-bounds ;; NO -> gives a 3^d experience plan, only 2*d needed for gradient computation (2*d+1 as we add current point)
   
-  let points grid-experience-plan param-names-and-bounds
   
-  let values table:make
+  ;; Run Model on constructed points
+  
+  let values table:make  
   
   foreach points [
-    
+    ;; Note : setup here is deterministic, can exchange order of setup/repets
+    ;;
     ;; setup parameters
+    ;; exploration setup    
+    ;; then go number of repets
+    ;;
     
-    ;; exploration setup
+    ;; first check if point has already been visited, if yes get result from table, if not compute.
+    ifelse table:has-key? calibration-objective-values ? [
+      table:put values ? table:get calibration-objective-values ?
+    ][
+      ; compute the point
+      output-print (word "Mse on point " ?)
+      
+      table:put values ? []
     
-    ;; go number of repets
+      foreach ? [run (word word word "set " (first ?) " " (last ?))]
+      setup-exploration
     
-    
-     
+      repeat n-repets [
+        let conf ?
+        carefully [
+          repeat total-time-steps [
+            go-for-one-time-step
+          ]
+          let obj mse-lf-timeseries
+          table:put values ? (lput obj (table:get values ?))
+          ]
+        [
+          ; catch exception (what case ?) : do nothing. (failed repetition)
+          output-print error-message
+        ]
+      ]
+      ; store final values in global table
+      table:put calibration-objective-values ? (table:get values ?)
+    ]
   ]
+  
+  report values
   
 end

@@ -63,6 +63,7 @@ to setup-data
   ;;real load factors, we deduce dpartures/arrivals from that
   set real-load-factors extrapolate r:get (word "getLoadFactors(\"" project-root-path "Data\",\"" first explode "." (last explode "/" stations-layer-path) "\")")
   
+  ;;total-time-steps initialized here because depends of size of R data
   set total-time-steps length item 0 real-load-factors
   
 end

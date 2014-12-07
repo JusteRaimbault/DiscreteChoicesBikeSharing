@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: soutenance.aux
+The style file: apalike.bst
+Database file #1: /Users/Juste/Documents/Cours/PIL/DiscreteChoicesBikeSharing/Biblio/bikesDiscreteChoices.bib
+Database file #2: /Users/Juste/Documents/ComplexSystems/Biblio/Bibtex/global.bib
+Database file #3: /Users/Juste/Documents/ComplexSystems/Biblio/Culture/Bibtex/culture.bib
+Database file #4: /Users/Juste/Documents/ComplexSystems/CityBikes/Biblio/bibtex.bib
+Database file #5: /Users/Juste/Documents/Cours/TheoreticalAnalysisComplexSystems/Project/Biblio/biblio.bib
+Database file #6: /Users/Juste/Documents/ComplexSystems/Misc/DynamiteSSchool2014/Biblio/dynamite.bib
+Warning--there's a number but no series in bierlaire2006biogeme
+Warning--empty journal in karatzoglou2004kernlab
+Warning--empty journal in mitra2010comparison
+Warning--empty journal in tsybakov2004introduction
+You've used 24 entries,
+            1935 wiz_defined-function locations,
+            616 strings with 9212 characters,
+and the built_in function-call counts, 9372 in all, are:
+= -- 902
+> -- 416
+< -- 14
++ -- 143
+- -- 140
+* -- 792
+:= -- 1658
+add.period$ -- 71
+call.type$ -- 24
+change.case$ -- 189
+chr.to.int$ -- 23
+cite$ -- 28
+duplicate$ -- 364
+empty$ -- 650
+format.name$ -- 172
+if$ -- 1810
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 24
+newline$ -- 120
+num.names$ -- 72
+pop$ -- 188
+preamble$ -- 1
+purify$ -- 189
+quote$ -- 0
+skip$ -- 254
+stack$ -- 0
+substring$ -- 565
+swap$ -- 34
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 142
+warning$ -- 4
+while$ -- 75
+width$ -- 0
+write$ -- 302
+(There were 4 warnings)

@@ -1,0 +1,147 @@
+\begin{thebibliography}{}
+
+\bibitem[Banos, 2013]{banos2013HDR}
+Banos, A. (D{\'e}cembre 2013).
+\newblock Pour des pratiques de mod{\'e}lisation et de simulation
+  lib{\'e}r{\'e}es en g{\'e}ographie et shs.
+\newblock {\em Th{\`e}se d'Habilitation {\`a} Diriger des Recherches, UMR CNRS
+  8504 G{\'e}ographie-Cit{\'e}s, ISCPIF}.
+
+\bibitem[Ben-Akiva and Bierlaire, 1999]{ben1999discrete}
+Ben-Akiva, M. and Bierlaire, M. (1999).
+\newblock Discrete choice methods and their applications to short term travel
+  decisions.
+\newblock In {\em Handbook of transportation science}, pages 5--33. Springer.
+
+\bibitem[Bierlaire, 2006]{bierlaire2006biogeme}
+Bierlaire, M. (2006).
+\newblock Biogeme: a free package for the estimation of discrete choice models.
+\newblock In {\em Swiss Transport Research Conference}, number
+  TRANSP-OR-CONF-2006-048.
+
+\bibitem[Borgnat et~al., 2009a]{borgnat2009modelisation}
+Borgnat, P., Abry, P., and Flandrin, P. (2009a).
+\newblock Mod{\'e}lisation statistique cyclique des locations de v{\'e}lo'v
+  {\`a} lyon.
+\newblock In {\em XXIIe colloque GRETSI (traitement du signal et des images),
+  Dijon (FRA), 8-11 septembre 2009}. GRETSI, Groupe d'Etudes du Traitement du
+  Signal et des Images.
+
+\bibitem[Borgnat et~al., 2009b]{borgnat2009studying}
+Borgnat, P., Abry, P., Flandrin, P., Rouquier, J.-B., et~al. (2009b).
+\newblock Studying lyon's v{\'e}lo'v: a statistical cyclic model.
+\newblock In {\em European Conference on Complex Systems 2009}.
+
+\bibitem[Bourcet et~al., 2014]{bourcet2014vlib}
+Bourcet, M., Lesturgie, J., Allain, T., Etienne, C., Sebes, A., and Raimbault,
+  J. (June 2014).
+\newblock Le v{\'e}lib comme choix de mode.
+\newblock Technical report, ENPC, D{'e}partement VET.
+
+\bibitem[Boutron et~al., 2010]{boutron2010reporting}
+Boutron, I., Dutton, S., Ravaud, P., and Altman, D.~G. (2010).
+\newblock Reporting and interpretation of randomized controlled trials with
+  statistically nonsignificant results for primary outcomes.
+\newblock {\em JAMA: the journal of the American Medical Association},
+  303(20):2058--2064.
+
+\bibitem[Brunsdon et~al., 2002]{brunsdon2002geographically}
+Brunsdon, C., Fotheringham, A., and Charlton, M. (2002).
+\newblock Geographically weighted summary statistics---a framework for
+  localised exploratory data analysis.
+\newblock {\em Computers, Environment and Urban Systems}, 26(6):501--524.
+
+\bibitem[Brunsdon et~al., 1998]{brunsdon1998geographically}
+Brunsdon, C., Fotheringham, S., and Charlton, M. (1998).
+\newblock Geographically weighted regression.
+\newblock {\em Journal of the Royal Statistical Society: Series D (The
+  Statistician)}, 47(3):431--443.
+
+\bibitem[Crabtree and Kohler, 2012]{crabtree2012modelling}
+Crabtree, S.~A. and Kohler, T.~A. (2012).
+\newblock Modelling across millennia: Interdisciplinary paths to ancient
+  socio-ecological systems.
+\newblock {\em Ecological Modelling}, 241:2--4.
+
+\bibitem[Crowe et~al., 2010]{crowe2010comparison}
+Crowe, B.~J., Lipkovich, I.~A., and Wang, O. (2010).
+\newblock Comparison of several imputation methods for missing baseline data in
+  propensity scores analysis of binary outcome.
+\newblock {\em Pharmaceutical statistics}, 9(4):269--279.
+
+\bibitem[DeMaio, 2009]{demaio2009bike}
+DeMaio, P. (2009).
+\newblock Bike-sharing: History, impacts, models of provision, and future.
+\newblock {\em Journal of Public Transportation}, 12(4):41--56.
+
+\bibitem[Gifford and Campus, 2004]{gifford2004will}
+Gifford, J. and Campus, A. (2004).
+\newblock Will smart bikes succeed as public transportation in the united
+  states?
+\newblock {\em Center for Urban Transportation Research}, 7(2):1.
+
+\bibitem[Kaltenbrunner et~al., 2010]{kaltenbrunner2010urban}
+Kaltenbrunner, A., Meza, R., Grivolla, J., Codina, J., and Banchs, R. (2010).
+\newblock Urban cycles and mobility patterns: Exploring and predicting trends
+  in a bicycle-based public transport system.
+\newblock {\em Pervasive and Mobile Computing}, 6(4):455--466.
+
+\bibitem[Karatzoglou et~al., 2004]{karatzoglou2004kernlab}
+Karatzoglou, A., Smola, A., Hornik, K., and Zeileis, A. (2004).
+\newblock kernlab-an s4 package for kernel methods in r.
+
+\bibitem[Liu et~al., 2012]{liu2012solving}
+Liu, Z., Jia, X., and Cheng, W. (2012).
+\newblock Solving the last mile problem: Ensure the success of public bicycle
+  system in beijing.
+\newblock {\em Procedia-Social and Behavioral Sciences}, 43:73--78.
+
+\bibitem[Michau et~al., 2011]{michau2011peut}
+Michau, G., Robardet, C., Merchez, L., Jensen, P., Abry, P., Flandrin, P., and
+  Borgnat, P. (2011).
+\newblock Peut-on attraper les utilisateurs de v{\'e}lo'v au lasso.
+\newblock In {\em Proceedings of the 23e Colloque sur le Traitement du Signal
+  et des Images. GRETSI-201}, pages 46--50.
+
+\bibitem[Mitra and Reiter, 2010]{mitra2010comparison}
+Mitra, R. and Reiter, J.~P. (2010).
+\newblock A comparison of two methods of estimating propensity scores after
+  multiple imputation.
+
+\bibitem[Nair et~al., 2013]{nair2013large}
+Nair, R., Miller-Hooks, E., Hampshire, R.~C., and Bu{\v{s}}i{\'c}, A. (2013).
+\newblock Large-scale vehicle sharing systems: Analysis of v{\'e}lib'.
+\newblock {\em International Journal of Sustainable Transportation},
+  7(1):85--106.
+
+\bibitem[O'Brien et~al., 2013]{o2013mining}
+O'Brien, O., Cheshire, J., and Batty, M. (2013).
+\newblock Mining bicycle sharing data for generating insights into sustainable
+  transport systems.
+\newblock {\em Journal of Transport Geography}.
+
+\bibitem[Raimbault, 2014]{raimbault2014user}
+Raimbault, J. (2014).
+\newblock User-based solutions for increasing level of service in bike-sharing
+  user-based solutions for increasing level of service in bike-sharing
+  transportation systems.
+\newblock In {\em Proceedings of the Conference on Complex Systems Design and
+  Management. CSDM, Paris 12-14 nov. 2014.}
+
+\bibitem[Rubin, 2009]{rubin2009multiple}
+Rubin, D.~B. (2009).
+\newblock {\em Multiple imputation for nonresponse in surveys}, volume 307.
+\newblock Wiley. com.
+
+\bibitem[Tsybakov, 2004]{tsybakov2004introduction}
+Tsybakov, A.~B. (2004).
+\newblock Introduction to nonparametric estimation. (introduction {\`a}
+  l'estimation non-param{\'e}trique.).
+
+\bibitem[Vogel et~al., 2011]{vogel2011understanding}
+Vogel, P., Greiser, T., and Mattfeld, D.~C. (2011).
+\newblock Understanding bike-sharing systems using data mining: Exploring
+  activity patterns.
+\newblock {\em Procedia-Social and Behavioral Sciences}, 20:514--523.
+
+\end{thebibliography}
