@@ -1,0 +1,43 @@
+
+;;;;;;;;;;;;
+;; gis and cache data preprocessing and loading
+;;;;;;;;;;;;
+
+
+
+to preprocess
+  setup
+  nw:set-context turtles links
+  nw:save-graphml "preproc/network.gml"
+  
+  write-table-to-file cached-distances "preproc/distances.tab"
+  write-table-to-file cached-paths "preproc/paths.tab"
+end
+
+
+;;
+; quick setup from preprocessed data
+to setup-preprocessed
+  
+  setup-world-and-vars
+  
+  load-gis-data
+  nw:load-graphml "preproc/network.gml"
+  setup-boundaries
+
+  ; calculate cache -> load from file
+  calculate-cache
+  ; as fast as doing by caching in file ? would need a fast-access database ?
+  ;read-table-from-file "cached-distances" "preproc/distances.tab"
+  ;output-print "chached distances loaded"
+  ;read-table-from-file "cached-paths" "preproc/paths.tab"
+  ;output-print "chached paths loaded"
+  
+  ; rest is done in setup-exploration call
+  
+  
+  
+  
+  
+  
+end

@@ -16,7 +16,16 @@ end
 to setup-r-functions
   output-print "... R functions"
   ;;path is supposed to stay the same
-  r:eval (word "source(\"" project-root-path "Models/Statistics/NLFunctions.R\")") 
+  carefully [rserve:init 6311 "localhost"][output-print error-message]
+  output-print "... connected to rserve"
+  ;output-print rserve:get "2+2"
+  ;output-print (word "work dir is " project-root-path)
+  ;rserve:eval (word "setwd(\"" project-root-path "\")")
+  ;output-print rserve:get "getwd()"
+  ;output-print rserve:get "list.files()"
+  let pathroot (word pathdir:get-current pathdir:get-separator)
+
+  rserve:eval (word "source(\"" pathroot "stats/NLFunctions.R\",chdir=TRUE)")
 end
 
 ;;;;;;;;;;;;;;;;;;;;
@@ -39,19 +48,22 @@ end
 ;; -> extrapolated from the values at t + mean_travel_time ? or by integration on a "possible" window of travel times
 ;; in any cases need a sort of inference of travels. may be difficult...
 ;;
-;; NOTE that the core of the model resides in a way in that parametrisation. Calibration has to be done on a reduced number of scalar parameters ruling that parametrization.
+;; NOTE that the core of the model resides in a way in that parametrization. Calibration has to be done on a reduced number of scalar parameters ruling that parametrization.
 ;;
 ;;;;;;;;;;;;;;;;;
 
 
 
 to setup-data
+  let pathroot (word pathdir:get-current pathdir:get-separator)
   output-print "... loading R data"
   ;;get data time step
   ;set data-time-step r:get "print(\"\")"
   
   ;;get basic characteristics
-  set stations-characs r:get (word "getStationsCharacs(\"" project-root-path "Data\",\"" first explode "." (last explode "/" stations-layer-path) "\")")
+  show (word "getStationsCharacs(\"" pathroot "data\",\"" first explode "." (last explode "/" stations-layer-path) "\")")
+  show rserve:get "getwd()"
+  set stations-characs rserve:get (word "getStationsCharacs(\"" pathroot "data\",\"" first explode "." (last explode "/" stations-layer-path) "\")")
   
   ;;get intentions time series -> discrete field on patches.
   ;;function need number of patches
@@ -61,7 +73,7 @@ to setup-data
   ;;get objective time series of real arrivals/departures.
   ;; -> travels extracted from that; calibration done on that!
   ;;real load factors, we deduce dpartures/arrivals from that
-  set real-load-factors extrapolate r:get (word "getLoadFactors(\"" project-root-path "Data\",\"" first explode "." (last explode "/" stations-layer-path) "\")")
+  set real-load-factors extrapolate rserve:get (word "getLoadFactors(\"" pathroot "data\",\"" first explode "." (last explode "/" stations-layer-path) "\")")
   
   ;;total-time-steps initialized here because depends of size of R data
   set total-time-steps length item 0 real-load-factors
@@ -137,16 +149,17 @@ to calculate-r-data[mapping?]
   
   output-print "... getting kernel densities"
   ;;get kernel densities
-  r:put "realArrivals" real-arrivals
-  r:put "realDepartures" real-departures
-  r:put "dataSpatialWidthStep" data-width-steps
-  r:put "xPoints" item 1 stations-characs
-  r:put "yPoints" item 2 stations-characs
-  r:put "sigma" kernel-size
-  r:put "tmax" length item 0 real-arrivals
-  r:eval (word "source(\"" project-root-path "Models/Statistics/NLKernel.R\",local=TRUE)") 
-  set destination-probas r:get "arrivals"
-  set origin-probas r:get "departures"
+  rserve:put "realArrivals" real-arrivals
+  rserve:put "realDepartures" real-departures
+  rserve:put "dataSpatialWidthStep" data-width-steps
+  rserve:put "xPoints" item 1 stations-characs
+  rserve:put "yPoints" item 2 stations-characs
+  rserve:put "sigma" kernel-size
+  rserve:put "tmax" length item 0 real-arrivals
+  let pathroot (word pathdir:get-current pathdir:get-separator)
+  rserve:eval (word "source(\"" pathroot "stats/NLKernel.R\",chdir=TRUE)") 
+  set destination-probas rserve:get "arrivals"
+  set origin-probas rserve:get "departures"
 end
 
 

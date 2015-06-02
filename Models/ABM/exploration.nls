@@ -8,6 +8,8 @@
 to setup-openmole-experiment [walking betawaiting betamoving information kernel]
   show "Setting up parameters..."
   
+  show (word "edges : " count edges)
+  
   set kernel-size kernel
   set mean-tolerance-radius walking ; \in [100;1000]
   set beta-waiting betawaiting ; \in [-1;0]

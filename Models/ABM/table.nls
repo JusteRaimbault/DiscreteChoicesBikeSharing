@@ -1,0 +1,26 @@
+
+;;;;;;;;;;;
+;; experimental table file writing
+;;;;;;;;;;;
+
+
+
+to write-table-to-file [table file]
+  print-in-file file (word "TABLE")
+  
+  foreach table:keys table [
+    print-in-file file (word ? ":" (table:get table ?)) 
+  ]
+  
+end
+
+; table needs to be a global
+to read-table-from-file [table-name file]
+  run (word "set " table-name " table:make")
+  let raw read-file file
+  foreach but-first raw [
+    let entry explode ":" ?
+    run (word "table:put " table-name " " (first entry) " " (last entry))
+  ]
+  
+end

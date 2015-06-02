@@ -1,4 +1,4 @@
-extensions [nw gis table r pathdir gradient context]
+extensions [nw gis table rserve pathdir gradient context]
 
 
 
@@ -48,10 +48,17 @@ __includes [
   
   "test.nls"
   
+  ;;;;;;;;;;;;
+  ;; Data preprocessing for headless run
+  ;;;;;;;;;;;;
+  
+  "preprocessing.nls"
   
   ;;;;;;;;;;;;
   ;; Utilities
   ;;;;;;;;;;;;
+  
+  "table.nls"
   
   "utils/misc/List.nls"
   ;"utils/network/Network.nls" 
@@ -63,6 +70,7 @@ __includes [
   "utils/math/RandomUtilities.nls" 
   "utils/exploration/ExplorationUtilities.nls" 
   "utils/io/FileUtilities.nls" 
+  "utils/io/Timer.nls"
 ]
 
 globals [

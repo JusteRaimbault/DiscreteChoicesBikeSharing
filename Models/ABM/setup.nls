@@ -92,11 +92,11 @@ to setup-world-and-vars
 end
 
 to setup-headless-vars
-  set paths-layer-path "data/chatelet_roads.shp"
-  set stations-layer-path "data/stations_chatelet.shp"
-  set boundaries-layer-path "data/boundaries_chatelet.shp"
-  set cluster-treshold 4
-  set shortest-calc-prop 40
+  set paths-layer-path "data/gis/chatelet_roads.shp"
+  set stations-layer-path "data/gis/stations_chatelet.shp"
+  set boundaries-layer-path "data/gis/boundaries_chatelet.shp"
+  set cluster-treshold 6
+  set shortest-calc-prop 30
   set io-number 20
   set data-width-steps 20
   set data-time-step 5
