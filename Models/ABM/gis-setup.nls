@@ -59,7 +59,7 @@ to load-network
   ;;beware of which function is called to create nw :
   ;; depending on the "format" of the gis file, intersections may not exist in the initial file
   ;; what obliges to call more complicated function than simple vertices clustering. 
-  create-network
+  create-network paths-layer-path cluster-treshold
   
   ;;need for a special conenxification of the network
   ;;we assume there is one giant component and some very small: we keep only the giant
@@ -75,8 +75,8 @@ to connexify-network
   ;;approximative, should put a threshold on cluster size, but still, works
   snapshot
   let components nw:weak-component-clusters
-  let m max map length components
-  foreach components [if length ? < m [foreach ? [ask ? [ask my-paths [die] die]]]]
+  let m max map count components
+  foreach components [if count ? < m [ask ? [ask my-edges [die] die]]]
 end
 
 
@@ -86,7 +86,7 @@ to setup-boundaries
   let candidates []
   ;;quite high complexity, beware of not havong too much boundaries features
   foreach gis:feature-list-of boundaries-layer-data [
-     let inters paths with [gis:intersects? self ?]
+     let inters edges with [gis:intersects? self ?]
      ask inters[
        set candidates lput one-of [both-ends] of self candidates 
      ]

@@ -16,14 +16,14 @@ to setup-display
   gis:set-drawing-color blue
   gis:draw paths-layer-data 1
   
-  ask vertices [set hidden? true] ask paths [set hidden? true]
+  ask vertices [set hidden? true] ask edges [set hidden? true]
 end
 
 
 
 to display-network
   ask vertices [set hidden? true]
-  ask paths [set color blue set thickness 0.2]
+  ask edges [set color blue set thickness 0.2]
 end
 
 

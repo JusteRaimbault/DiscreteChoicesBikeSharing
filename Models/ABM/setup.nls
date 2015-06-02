@@ -80,6 +80,36 @@ to setup-world-and-vars
   
   set total-travel-count 0
   set total-out-travel-count 0
+  
+  
+  ;;;;;;;;;;;;
+  ;; Headless vars
+  ;;;;;;;;;;;;
+  
+  setup-headless-vars
+  
+  
+end
+
+to setup-headless-vars
+  set paths-layer-path "data/chatelet_roads.shp"
+  set stations-layer-path "data/stations_chatelet.shp"
+  set boundaries-layer-path "data/boundaries_chatelet.shp"
+  set cluster-treshold 4
+  set shortest-calc-prop 40
+  set io-number 20
+  set data-width-steps 20
+  set data-time-step 5
+  set real-world-width 3000
+  set internal-travel-prop 20
+  
+  set kernel-size 50
+  set mean-tolerance-radius 300 ; \in [100;1000]
+  set beta-waiting -0.05  ; \in [-1;0]
+  set beta-moving -0.15  ; \in [-1;0]
+  set info-proportion 30  ; %
+  
+  
 end
 
 
@@ -101,9 +131,9 @@ to calculate-cache
      ;;(avoid a half unuseful calculations)
      ask ? [
        foreach remaining-points [
-         let p (nw:weighted-path-to ? "path-length")
+         let p (nw:weighted-path-to ? "edge-length")
          table:put cached-paths (list [who] of self [who] of ?) p
-         table:put cached-distances (list [who] of self [who] of ?) (nw:weighted-distance-to ? "path-length")* real-patch-size ; (sum [path-length] of to-agentset p)
+         table:put cached-distances (list [who] of self [who] of ?) (nw:weighted-distance-to ? "edge-length")* real-patch-size ; (sum [path-length] of to-agentset p)
        ]
      ]
   ]
@@ -134,7 +164,7 @@ to setup-stations
   connect-stations-to-network
   
   ;;kills unuseful and bugging created links 
-  ask paths with [path-length = 0][ask one-of both-ends with-min [count my-links][die] die]
+  ask edges with [edge-length = 0][ask one-of both-ends with-min [count my-links][die] die]
   
   ;;need reconnexification !
   connexify-network
@@ -177,7 +207,7 @@ to connect-stations-to-network
   ;;recuperation of the code "growing nw of urban framework"
   ask stations [
     let mx xcor let my ycor
-    let nearest-path first sort-on [distance-to-point mx my] paths
+    let nearest-path first sort-on [distance-to-point mx my] edges
     let inter nobody
     ask nearest-path [
        let coord-inter coord-of-projection-of mx my
@@ -188,12 +218,12 @@ to connect-stations-to-network
        set e1 end1 set e2 end2
        die
     ]
-    ask inter [hide-turtle if inter != e1 [create-path-with e1 [new-path]] if inter != e2 [ create-path-with e2 [new-path]]]
+    ask inter [hide-turtle if inter != e1 [create-edge-with e1 [new-path]] if inter != e2 [ create-edge-with e2 [new-path]]]
     ask one-of vertices [
       hatch 1 [
         setxy mx my
         hide-turtle
-        create-path-with inter [new-path]
+        create-edge-with inter [new-path]
       ]
     ]
   ]
@@ -224,6 +254,10 @@ to clear
   reset-ticks
 end
 
+
+to new-path
+  new-edge
+end
 
 
 

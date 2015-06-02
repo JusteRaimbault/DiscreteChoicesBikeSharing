@@ -1,0 +1,92 @@
+import java.io._
+import sys.process._
+import java.util.Date
+
+// Parameters
+val walking = Val[Double]
+val betawaiting = Val[Double]
+val betamoving = Val[Double]
+val information = Val[Double]
+val kernel = Val[Double]
+val replication = Val[Int]
+
+// exploration task
+/*val exploration =
+  ExplorationTask(
+         (walking in (300.0 to 300.0 by 1)) x
+    (betawaiting in (-0.05 to -0.05 by 1)) x
+    (betamoving in (-0.15 to -0.15 by 1)) x
+    (information in (30.0 to 30.0 by 1)) x
+    (kernel in (50.0 to 50.0 by 1)) x
+    (replication in (UniformDistribution[Int]() take 2))
+  )
+*/
+
+//-------------------------------------------------------
+// FOR TEST
+ val exploration =  ExplorationTask(
+  (walking in (300.0 to 300.0 by 1)) x
+    (betawaiting in (-0.05 to -0.05 by 1)) x
+    (betamoving in (-0.15 to -0.15 by 1)) x
+    (information in (30.0 to 30.0 by 1)) x
+    (kernel in (50.0 to 50.0 by 1)) x
+    (replication in (UniformDistribution[Int]() take 2))
+  )
+//--------------------------------------------------------
+
+
+// reporters
+// "adverse-event-proportion" "mean-travels-relative-speed" "mean-detoured-travels-relative-speed" "mse-lf-timeseries"
+val adverse=Val[Double]
+val relspeed=Val[Double]
+val detourspeed=Val[Double]
+val mse=Val[Double]
+
+//NetLogo go for one time step
+val cmds = List(
+  "setup-openmole-experiment ${walking} ${betawaiting} ${betamoving} ${information} ${kernel}",
+  "go-for-one-day"
+)
+
+
+// system adjustement for gis lib in netlogo
+System.setProperty("com.sun.media.jai.disableMediaLib", "true")
+
+//show available processors
+//println("Available Processors : "+Runtime.getRuntime().availableProcessors());
+
+
+val scriptPath = System.getenv("CS_HOME")+"/DiscreteChoicesBikeSharing/Models/ABM/HEADLESS_CityBikes.nlogo"
+
+val model = NetLogo5Task(scriptPath,cmds,true) set (
+  inputs += (diffusion,diffusionsteps,alphalocalization,growthrate),
+  netLogoOutputs += ("adverse-event-proportion", adverse),
+  netLogoOutputs += ("mean-travels-relative-speed", relspeed),
+  netLogoOutputs += ("mean-detoured-travels-relative-speed", detourspeed),
+  netLogoOutputs += ("mse-lf-timeseries",mse),
+  netLogoOutputs += ("mean-tolerance-radius",walking),
+  netLogoOutputs += ("beta-waiting",betawaiting),
+  netLogoOutputs += ("beta-moving",betamoving),
+  netLogoOutputs += ("info-proportion",information),
+  netLogoOutputs += ("kernel-size",kernel)
+  )
+
+// output
+//val h = ToStringHook()
+val h = AppendToCSVFileHook("res_oml/"+(new java.util.Date()).toString().replace(" ","_")+".csv")
+
+
+
+val startTime = System.currentTimeMillis
+
+// environement
+//val env = LocalEnvironment(4)
+val env = LocalEnvironment(1)
+
+logger.level("FINE")
+
+val exec = exploration -< (model on env hook h) start
+
+exec.waitUntilEnded
+
+println("Ellapsed Time is "+(System.currentTimeMillis - startTime) / 1000.0)

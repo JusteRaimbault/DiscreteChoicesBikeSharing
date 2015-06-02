@@ -35,7 +35,7 @@ to map-flows
   ;;and representation
   ask stations [set size 5]
   clear-drawing
-  ask paths [set hidden? false set cumulated-flow 0]
+  ask edges [set hidden? false set cumulated-flow 0]
   
   repeat total-time-steps [
     let n item ticks departures-numbers
@@ -52,9 +52,9 @@ to map-flows
     tick
   ]
   
-  ask paths [
+  ask edges [
     set thickness cumulated-flow / 70
-    set color gradient:scale [[0 255 0][255 0 0]] cumulated-flow 0 (max [cumulated-flow] of paths)
+    set color gradient:scale [[0 255 0][255 0 0]] cumulated-flow 0 (max [cumulated-flow] of edges)
   ]
   
 end

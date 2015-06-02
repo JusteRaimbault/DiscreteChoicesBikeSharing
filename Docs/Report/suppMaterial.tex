@@ -9,7 +9,7 @@
 %
 \documentclass[epjH]{svjour}
 %
-\usepackage{graphicx,subfig,amssymb,bbm,wrapfig,listings}
+\usepackage{graphicx,subfig,amssymb,bbm,wrapfig,listings,amsmath}
 
 %
 \newcommand{\noun}[1]{\textsc{#1}}
@@ -74,9 +74,29 @@ Chosen socio-economic variable are relatively simple and were designed to captur
 
 \paragraph{Attributes of scenarii\bigskip\\}
 
-Possible modal choices are bus and bike-sharing
+Possible modal choices are bus and bike-sharing, which have common and distinct attributes, stratified into different levels used to build scenarii in a combinatorial way.
+
+Common attributes are not stratified (continuous random values) and treated as variables, and are :
+\begin{itemize}
+\item Distance of the travel (in meters)
+\bigskip
+\item Estimated travel time, assumed as the same for both mode choice, what is a reasonable hypothesis in that case.
+\end{itemize}
 
 
+Bike-sharing attributes describe quality of service :
+\begin{itemize}
+\item Time to find a bike ; stratified into 1, 5 and 10 minutes
+\bigskip
+\item Time to find a parking place when at destination, with same stratification.
+\end{itemize}
+
+The same way, bus attributes describe level of service, including comfort :
+\begin{itemize}
+\item Bus delay, stratified into 0, 5 and 15 minutes
+\bigskip
+\item Bus comfort, qualitatively decomposed into : sit available (1), standing (2), standing and overcrowded (3).
+\end{itemize}
 
 \paragraph{Descriptive statistics\bigskip\\}
 
@@ -145,8 +165,34 @@ Figures 1 and 2 show the public pages available to fill the questionnaire online
 %%%%%%%%%%%%%%%%%%%%
 \subsection{Modeling}
 
-\paragraph{Full model}
+We describe here the full model, from which results have been extracted for the a priori parameter values in the calibration procedure.
 
+We take linear utilities, and use socio-economic variables in only one choice as usual :
+
+\[
+U_{bus}=K_{bus} + \sum_{i=1}^{3} \beta_{confort=i}\mathbbm{1}_{confort=i} + \beta_{delay} delay + \varepsilon_{bus}
+\]
+
+\[
+\begin{split}
+U_{bike}= & K_{bike} + \beta_{age} age + \sum_{i=1}^{3} \beta_{csp=i}\mathbbm{1}_{csp=i} + \beta_d d +  \beta_{loc} d_{loc} + \beta_{subscr} \mathbbm{1}_{subscr}\\
+& +  \sum_{i=1}^{3} \beta_{weather=i}\mathbbm{1}_{weather=i}+ \beta_t t + \beta_{waiting} waiting +  \beta_{parking} parking + \varepsilon_{bike}
+\end{split}
+\]
+
+The model is written in Biogeme and directly run with the datafile. We obtain the results presented in the following table :
+
+\hspace{-0.6cm}
+\includegraphics[width=\textwidth]{figures/modelResults1}\\
+\includegraphics[width=\textwidth]{figures/modelResults2}
+
+\bigskip
+\bigskip
+
+Sense of influence are all correct, at the exception of the bad weather, what should be due to the unbalance issue in data. Indeed, some parameters have poor p-value and can be difficultly trusted, as socio-economic category, what was expected as most interrogated persons were students. We use these results to extract boundaries for the calibration procedure explained in the main paper, taking in this table parameters $\beta_{distance}$ and $\beta_{t bus}$ with associated standard deviations.
+
+
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%
 % 2) Data on system dynamics
@@ -310,6 +356,8 @@ We show in figure 6 the geographical representation (drawn with QGIS), for which
 
 
 
+\newpage
+
 %%%%%%%%%%%%%%%%%%%%
 % 3)  Agent-based Modeling
 %%%%%%%%%%%%%%%%%%%%
@@ -415,8 +463,8 @@ We have then the following auxiliary files :
 \item Exploration and Calibration
 \begin{itemize}
 \item \texttt{exploration.nls} Parameter space exploration
-\item \texttt{bikers.nls} Bikers agents
-\item \texttt{depqueue.nls} Static abstract class managing walking agents
+\item \texttt{mapping.nls} Visualization of integrated trajectories
+\item \texttt{calibration.nls} Gradient calibration algorithm
 \end{itemize}
 \item Standard utilities
 
@@ -430,6 +478,7 @@ We have then the following auxiliary files :
 
 We give here details on model execution and application, by first showing example of potential behaviors, then developing statistical analysis for internal validation and finally investigation on user strategies.
 
+Figures 8 shows a capture of the interface of the model. Figure 9 and 10 show example of possible outputs of the model for different parameter values.
 
 %% Figure interface
 \begin{figure}
@@ -491,6 +540,7 @@ the typical number of repetitions needed when applying the model : supposing nor
 
 \paragraph{Investigation of user-based strategies\bigskip\\}
 
+The first interesting application of the model is the investigation of user-based optimization strategies, that we detail here.
 
 \paragraph{Influence of walking radius}
 
@@ -591,7 +641,11 @@ of information.}
 
 \subsection{Model Calibration}
 
-
+Runtime for one run of the model is about 45 seconds, and gradient simplex algorithm required around 50 iterations for convergent cases (it was set as maximal iteration number). We were able to run 100 times the algorithm with a total CPU time of 95 hours (almost 4 days), and found 76 runs satisfying convergence criteria. This result stays statistically poor as it is difficult to draw a conclusion on so few repetitions, whereas the dispersion is quite large in the large dimension parameter space. We plot in figure 14 confidence interval for $\beta_d$ and the estimated (mean) value, computed on convergent runs, what may be not asymptotically valid depending on the convergence rate (that we can not now, lacking of computation power).
+\begin{figure}
+\includegraphics[width=\textwidth,height=0.4\textheight]{figures/convalgo}
+\caption{Convergence of $\beta_d$ for the confidence interval and estimated value, computed on convergent runs (may be therefore biased).}
+\end{figure}
 
 
 \newpage

@@ -246,7 +246,7 @@ to reroute-to-station
     set d one-of vertices with-min [distance s]
   ]
   let p [] let dis 0
-  ask o [set p nw:weighted-path-to d "path-length" set dis nw:weighted-distance-to d "path-length"]
+  ask o [set p nw:weighted-path-to d "edge-length" set dis nw:weighted-distance-to d "edge-length"]
   set current-travel p set current-origin o set current-objective d
   set travel-distance travel-distance + dis
   ifelse o = d [move-to one-of stations with-min [distance myself]][enter-travel]

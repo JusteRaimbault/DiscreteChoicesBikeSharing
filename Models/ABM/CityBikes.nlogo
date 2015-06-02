@@ -1,4 +1,4 @@
-extensions [nw gis table r pathdir gradient]
+extensions [nw gis table r pathdir gradient context]
 
 
 
@@ -53,15 +53,16 @@ __includes [
   ;; Utilities
   ;;;;;;;;;;;;
   
-  "/Users/Juste/Documents/ComplexSystems/Softwares/NetLogo/utils/ListUtilities.nls" 
-  "/Users/Juste/Documents/ComplexSystems/Softwares/NetLogo/utils/NetworkUtilities.nls" 
-  "/Users/Juste/Documents/ComplexSystems/Softwares/NetLogo/utils/LinkUtilities.nls" 
-  "/Users/Juste/Documents/ComplexSystems/Softwares/NetLogo/utils/EuclidianDistanceUtilities.nls" 
-  "/Users/Juste/Documents/ComplexSystems/Softwares/NetLogo/utils/TableUtilities.nls" 
-  "/Users/Juste/Documents/ComplexSystems/Softwares/NetLogo/utils/StringUtilities.nls" 
-  "/Users/Juste/Documents/ComplexSystems/Softwares/NetLogo/utils/RandomUtilities.nls" 
-  "/Users/Juste/Documents/ComplexSystems/Softwares/NetLogo/utils/ExplorationUtilities.nls" 
-  "/Users/Juste/Documents/ComplexSystems/Softwares/NetLogo/utils/FileUtilities.nls" 
+  "utils/misc/List.nls"
+  ;"utils/network/Network.nls" 
+  "utils/gis/GISNetwork.nls"
+  "utils/agent/Link.nls" 
+  "utils/math/EuclidianDistanceUtilities.nls" 
+  "utils/misc/Table.nls" 
+  "utils/misc/String.nls" 
+  "utils/math/RandomUtilities.nls" 
+  "utils/exploration/ExplorationUtilities.nls" 
+  "utils/io/FileUtilities.nls" 
 ]
 
 globals [
@@ -285,17 +286,17 @@ vertices-own[
   io-probas 
 ]
 
-breed [abstract-gis-paths abstract-gis-path]
+breed [abstract-gis-edges abstract-gis-edge]
 
-abstract-gis-paths-own [
+abstract-gis-edges-own [
    gis-feature
    vertices-list
 ]
 
-undirected-link-breed [paths path]
+undirected-link-breed [edges edge]
 
-paths-own [
-  path-length
+edges-own [
+  edge-length
   
   ;;var for mapping of flows
   cumulated-flow
@@ -388,7 +389,7 @@ shortest-calc-prop
 shortest-calc-prop
 0
 100
-50
+30
 1
 1
 %
@@ -414,7 +415,7 @@ cluster-treshold
 cluster-treshold
 0
 10
-8.3
+6
 0.1
 1
 NIL
@@ -544,7 +545,7 @@ MONITOR
 107
 492
 paths
-count paths
+count edges
 17
 1
 11
@@ -607,7 +608,7 @@ mean-tolerance-radius
 mean-tolerance-radius
 0
 1000
-362
+186
 1
 1
 m
@@ -622,7 +623,7 @@ info-proportion
 info-proportion
 0
 100
-37
+78
 1
 1
 %
@@ -1136,7 +1137,7 @@ Polygon -7500403 true true 270 75 225 30 30 225 75 270
 Polygon -7500403 true true 30 75 75 30 270 225 225 270
 
 @#$#@#$#@
-NetLogo 5.0.2
+NetLogo 5.1.0
 @#$#@#$#@
 @#$#@#$#@
 @#$#@#$#@
@@ -1144,9 +1145,9 @@ NetLogo 5.0.2
 @#$#@#$#@
 default
 0.0
--0.2 0 1.0 0.0
+-0.2 0 0.0 1.0
 0.0 1 1.0 0.0
-0.2 0 1.0 0.0
+0.2 0 0.0 1.0
 link direction
 true
 0

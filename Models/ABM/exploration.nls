@@ -4,6 +4,20 @@
 ;;;;
 
 
+
+to setup-openmole-experiment [walking betawaiting betamoving information kernel]
+  show "Setting up parameters..."
+  
+  set kernel-size kernel
+  set mean-tolerance-radius walking ; \in [100;1000]
+  set beta-waiting betawaiting ; \in [-1;0]
+  set beta-moving betamoving ; \in [-1;0]
+  set info-proportion information 
+  
+  setup-exploration
+end
+
+
 to setup-exploration
   setup-r-data
   calculate-r-data false
