@@ -30,7 +30,7 @@ val replication = Val[Int]
     (betamoving in (-0.15 to -0.15 by 1)) x
     (information in (30.0 to 30.0 by 1)) x
     (kernel in (50.0 to 50.0 by 1)) x
-    (replication in (UniformDistribution[Int]() take 8))
+    (replication in (UniformDistribution[Int]() take 9))
   )
 //--------------------------------------------------------
 
@@ -48,7 +48,7 @@ val cmds = List(
   "setup-preprocessed",
   "setup-openmole-experiment ${walking} ${betawaiting} ${betamoving} ${information} ${kernel}",
   "go-for-one-day",
-  "show use-lf-timeseries",
+  "show mse-lf-timeseries",
   "toc"
 )
 
@@ -64,8 +64,8 @@ System.setProperty("com.sun.media.jai.disableMediaLib", "true")
 //println("Available Processors : "+Runtime.getRuntime().availableProcessors());
 
 
-//val scriptPath = System.getenv("CS_HOME")+"/DiscreteChoicesBikeSharing/Models/ABM/HEADLESS_CityBikes.nlogo"
-val scriptPath = "/Users/Juste/Documents/ComplexSystems/DiscreteChoicesBikeSharing/Models/ABM/HEADLESS_CityBikes.nlogo"
+val scriptPath = System.getenv("CS_HOME")+"/DiscreteChoicesBikeSharing/Models/ABM/HEADLESS_CityBikes.nlogo"
+//val scriptPath = "/Users/Juste/Documents/ComplexSystems/DiscreteChoicesBikeSharing/Models/ABM/HEADLESS_CityBikes.nlogo"
 
 
 val model = NetLogo5Task(scriptPath,cmds,true) set (
@@ -90,7 +90,7 @@ val h = AppendToCSVFileHook("res_oml/"+(new java.util.Date()).toString().replace
 val startTime = System.currentTimeMillis
 
 // environement
-val env = LocalEnvironment(4)
+val env = LocalEnvironment(3)
 
 logger.level("FINE")
 
