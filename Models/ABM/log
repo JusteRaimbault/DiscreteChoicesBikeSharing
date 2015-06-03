@@ -1,0 +1,1384 @@
+  ___                   __  __  ___  _     _____   _  _
+ / _ \ _ __   ___ _ __ |  \/  |/ _ \| |   | ____| | || |
+| | | | '_ \ / _ \ '_ \| |\/| | | | | |   |  _|   | || |_
+| |_| | |_) |  __/ | | | |  | | |_| | |___| |___  |__   _|
+ \___/| .__/ \___|_| |_|_|  |_|\___/|_____|_____|    |_|
+      |_|
+Loading explo.oml...
+import java.io._
+import sys.process._
+import java.util.Date
+walking: org.openmole.core.workflow.data.Prototype[Double] = walking: Double
+betawaiting: org.openmole.core.workflow.data.Prototype[Double] = betawaiting: Double
+betamoving: org.openmole.core.workflow.data.Prototype[Double] = betamoving: Double
+information: org.openmole.core.workflow.data.Prototype[Double] = information: Double
+kernel: org.openmole.core.workflow.data.Prototype[Double] = kernel: Double
+replication: org.openmole.core.workflow.data.Prototype[Int] = replication: Int
+warning: there were 8 feature warnings; re-run with -feature for details
+exploration: org.openmole.core.workflow.builder.TaskBuilder{def toTask: org.openmole.core.workflow.task.ExplorationTask with this.Built} = org.openmole.core.workflow.task.ExplorationTask$$anon$2@419ac0f5
+adverse: org.openmole.core.workflow.data.Prototype[Double] = adverse: Double
+relspeed: org.openmole.core.workflow.data.Prototype[Double] = relspeed: Double
+detourspeed: org.openmole.core.workflow.data.Prototype[Double] = detourspeed: Double
+mse: org.openmole.core.workflow.data.Prototype[Double] = mse: Double
+cmds: List[String] = List(tic, setup-preprocessed, setup-openmole-experiment ${walking} ${betawaiting} ${betamoving} ${information} ${kernel}, go-for-one-day, show mse-lf-timeseries, toc)
+res4: String = null
+scriptPath: String = /home/juste/ComplexSystems/DiscreteChoicesBikeSharing/Models/ABM/HEADLESS_CityBikes.nlogo
+warning: there were 9 feature warnings; re-run with -feature for details
+model: org.openmole.plugin.task.netlogo.NetLogoTaskBuilder = org.openmole.plugin.task.netlogo5.NetLogo5Task$$anon$1@5814fe43
+h: org.openmole.plugin.hook.file.AppendToCSVFileHookBuilder = org.openmole.plugin.hook.file.AppendToCSVFileHookBuilder@317d7a5e
+startTime: Long = 1433283707495
+env: org.openmole.core.workflow.execution.local.LocalEnvironment = org.openmole.core.workflow.execution.local.LocalEnvironment@3ed50b5f
+warning: there was one feature warning; re-run with -feature for details
+exec: org.openmole.core.workflow.mole.MoleExecution = org.openmole.core.workflow.mole.MoleExecution@4da6546a
+Setting up vars
+Setting up vars
+Setting up vars
+Loading GIS data
+Loading GIS data
+Loading GIS data
+Setting up vars
+Setting up vars
+Setting up vars
+Loading GIS data
+Loading GIS data
+Loading GIS data
+Setting up vars
+Setting up vars
+Setting up vars
+Setting up vars
+Setting up vars
+Setting up vars
+Loading GIS data
+Loading GIS data
+Loading GIS data
+Loading GIS data
+Loading GIS data
+Loading GIS data
+Boundaries points
+Boundaries points
+Boundaries points
+Boundaries points
+Boundaries points
+Boundaries points
+Boundaries points
+Boundaries points
+Boundaries points
+Boundaries points
+Boundaries points
+Boundaries points
+Calculating cache
+Calculating cache
+Calculating cache
+Calculating cache
+Calculating cache
+Calculating cache
+Calculating cache
+Calculating cache
+Calculating cache
+Calculating cache
+Calculating cache
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+observer: "Setting up parameters..."
+... R functions
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... connected to rserve
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask77ebd4ef-83f7-4d6e-afd5-dfbb46d2930a/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn4979"
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskb4c262ca-d7bd-42d8-891d-ac7c5cc7dae0/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn4980"
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+Setting up R interface
+observer: "Setting up parameters..."
+... R functions
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... connected to rserve
+... connected to rserve
+observer: "Setting up parameters..."
+... loading R data
+observer: "edges : 2086"
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask73f537f2-b9a3-4680-9b3a-8c4212a0ff8c/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn4981"
+Setting up R interface
+... R functions
+... connected to rserve
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskb6fa0aca-1c0b-4da0-9e87-f55df04caedd/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn4982"
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask3f72502d-13f6-4132-9db7-634a9cbfed94/ABM/data\",\"stations_chatelet\")"
+... loading R data
+observer: "/tmp/Rserv/conn4984"
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask3cd228dc-20a6-44a1-8bb7-064ac6f6e1c1/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn4983"
+... connected to rserve
+Calculating R data
+... extracting real travels
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask6a455f8b-da8c-454c-84d9-07185e5fe874/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn4985"
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask9ee175f2-d453-45c7-8f99-af475931dd89/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn4986"
+Calculating R data
+... extracting real travels
+... loading R data
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask154bc110-60ec-4eb0-9f07-5deff7571f8a/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn4988"
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask39526c4f-810d-462e-a949-cf7ac1e35568/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn4987"
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask623c9750-ddd0-4e73-881a-7249c2d6b536/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn4989"
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskde194516-12d1-4c30-a1e1-e110f6e51ea3/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn4990"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... boundaries probas
+Calculating R data
+... extracting real travels
+Calculating R data
+... extracting real travels
+Calculating R data
+... extracting real travels
+Calculating R data
+... extracting real travels
+Calculating R data
+... extracting real travels
+Calculating R data
+... extracting real travels
+... getting kernel densities
+Calculating R data
+... extracting real travels
+... getting kernel densities
+... boundaries probas
+... boundaries probas
+... boundaries probas
+... getting kernel densities
+... boundaries probas
+... boundaries probas
+... boundaries probas
+... boundaries probas
+... getting kernel densities
+... boundaries probas
+... getting kernel densities
+Calculating R data
+... extracting real travels
+Calculating R data
+... extracting real travels
+... getting kernel densities
+... getting kernel densities
+... getting kernel densities
+... getting kernel densities
+... getting kernel densities
+... boundaries probas
+... boundaries probas
+... getting kernel densities
+... getting kernel densities
+observer: 11026.845969667795
+Ellapsed time : 428.859 sec
+observer: 10250.985521844419
+Ellapsed time : 435.574 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: 9478.963485417025
+Ellapsed time : 498.941 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: 10340.416826947061
+Ellapsed time : 510.236 sec
+observer: 10043.018831501478
+Ellapsed time : 512.468 sec
+Setting up vars
+Loading GIS data
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskb4663aa0-bf32-4500-ad36-cb44c28148af/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5005"
+Boundaries points
+Calculating cache
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 11248.172220153023
+Ellapsed time : 521.477 sec
+Setting up vars
+Loading GIS data
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask44bebb28-2e55-4283-a910-6291a13a9f6c/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5007"
+Boundaries points
+Calculating cache
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Setting up vars
+Loading GIS data
+observer: 10710.865232671671
+Ellapsed time : 528.483 sec
+observer: 10379.527527703005
+Ellapsed time : 529.6 sec
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+observer: 10387.460329430301
+Ellapsed time : 538.465 sec
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask02e97c8c-aab0-4190-94dc-ffe9a74496d0/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5011"
+Calculating R data
+... extracting real travels
+observer: 11049.405440484054
+Ellapsed time : 539.793 sec
+... boundaries probas
+... getting kernel densities
+Setting up vars
+observer: 9788.88913104109
+Ellapsed time : 540.759 sec
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask353c9d8c-feb5-4928-85e4-267ed362c39b/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5015"
+Calculating R data
+... extracting real travels
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... boundaries probas
+... getting kernel densities
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask9bf1c4c9-e5ce-4b26-8c7d-5791e810b173/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5016"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 10975.837512735434
+Ellapsed time : 556.581 sec
+Setting up vars
+Loading GIS data
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask2b79d913-892e-426d-98f9-86e3f4bee127/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5018"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Setting up vars
+Loading GIS data
+Boundaries points
+Setting up vars
+Setting up vars
+Loading GIS data
+Calculating cache
+Loading GIS data
+Boundaries points
+Boundaries points
+Calculating cache
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+Setting up vars
+Loading GIS data
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskecc979a4-5675-4882-8efc-b2b610bc3f63/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5019"
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask4d3ef0d6-f538-44f7-89e6-9c6cd83f6afc/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5020"
+Calculating R data
+... extracting real travels
+Boundaries points
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Calculating cache
+... boundaries probas
+... getting kernel densities
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask413479f0-f7ae-4443-af15-1219dca90737/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5021"
+Calculating R data
+... extracting real travels
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... boundaries probas
+... getting kernel densities
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask7acfbeb3-f06f-4129-b453-b844150b97d4/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5022"
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskd540420d-87db-4a9b-ad1d-3d49ee5cfad9/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5023"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask2f4e1f52-deb9-43f6-a900-9675137b4ca6/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5024"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 9971.790675309245
+Ellapsed time : 412.069 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask23ac3f95-8dc6-4182-9437-f9526994d803/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5029"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 10195.817395624592
+Ellapsed time : 370.969 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: 10831.47933625924
+Ellapsed time : 377.692 sec
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaska7440ab6-af46-4d96-bfa7-c7ef569e6ff3/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5034"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Setting up vars
+Loading GIS data
+observer: 10160.68547142096
+Ellapsed time : 374.802 sec
+Boundaries points
+Calculating cache
+observer: 9270.174199448826
+Ellapsed time : 470.354 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+Setting up vars
+Loading GIS data
+Boundaries points
+observer: 9851.987761722177
+Ellapsed time : 426.688 sec
+observer: 10032.008048465168
+Ellapsed time : 427.669 sec
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask9d1f838f-2fa4-4c3a-a343-d978f1272b40/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5053"
+observer: 9553.140172878599
+Ellapsed time : 466.423 sec
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskf75a04f2-f31d-4402-abc0-8fda8b35807c/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5055"
+Setting up vars
+Loading GIS data
+Setting up vars
+Calculating R data
+... extracting real travels
+Loading GIS data
+... boundaries probas
+... getting kernel densities
+Boundaries points
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+Boundaries points
+Calculating cache
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask4d76a7a4-85ff-414b-8229-55c6641bc80e/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5056"
+Calculating cache
+Calculating R data
+... extracting real travels
+Setting up vars
+Loading GIS data
+... boundaries probas
+... getting kernel densities
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask24875476-70f3-4f6f-a2df-600cfd2b55cf/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5057"
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask8899901b-aeaa-4143-825c-fd5c85584f72/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5058"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask93e40987-8597-4ba2-8412-8cfe54941554/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5059"
+observer: 9793.764689341515
+Ellapsed time : 461.443 sec
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: 9957.149154621678
+Ellapsed time : 476.583 sec
+observer: 9605.290746891555
+Ellapsed time : 482.153 sec
+Setting up vars
+Loading GIS data
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+Boundaries points
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaske9b40d1a-e146-49f3-a74e-66f24f591d93/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5063"
+Calculating cache
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 10256.64168924188
+Ellapsed time : 485.963 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaske10525f2-d08a-4a59-bb26-10d9a7f51d04/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5065"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaske89b81bb-0381-450c-982e-1beadb06b030/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5066"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskb9c68203-e601-45ca-99ea-f3c76156203b/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5067"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 9368.102523676516
+Ellapsed time : 393.615 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask5a2f6d76-9202-4580-a370-438546af8810/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5072"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 9896.242189851573
+Ellapsed time : 471.628 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask9e8deecc-0f28-417c-a82c-9a8c25bc53df/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5074"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 9194.879204925106
+Ellapsed time : 383.816 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: 10147.366413801972
+Ellapsed time : 400.831 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask6a3a542f-e117-4b23-8c1e-bfa8beb052f2/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5077"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 10134.354090173545
+Ellapsed time : 484.596 sec
+Setting up vars
+Loading GIS data
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskb7ae4f8a-f0c5-48ab-9766-57d87008d83a/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5079"
+Boundaries points
+Calculating cache
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 9677.489967744381
+Ellapsed time : 420.174 sec
+observer: 9330.334028858619
+Ellapsed time : 385.721 sec
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask8d55e686-8131-4fbb-b640-6df2e7f3db2c/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5082"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Setting up vars
+observer: 9599.221676957777
+Ellapsed time : 438.924 sec
+Loading GIS data
+Setting up vars
+Loading GIS data
+Boundaries points
+observer: 10601.376324172888
+Ellapsed time : 441.926 sec
+Calculating cache
+Boundaries points
+Calculating cache
+observer: 10252.351287712761
+Ellapsed time : 378.139 sec
+Setting up vars
+Loading GIS data
+Setting up vars
+Boundaries points
+Loading GIS data
+Calculating cache
+Boundaries points
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+Calculating cache
+... connected to rserve
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask2f52db8f-328a-4774-891a-fa6179030e51/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5086"
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTasked55d95f-5db6-4924-96b1-fcd202633227/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5087"
+observer: 10360.124348899093
+Ellapsed time : 408.252 sec
+Calculating R data
+... extracting real travels
+Calculating R data
+... extracting real travels
+... boundaries probas
+... boundaries probas
+... getting kernel densities
+... getting kernel densities
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+observer: 8994.502066590978
+Ellapsed time : 419.621 sec
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask0468b32b-6ce7-4733-835e-563024fea5b3/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5089"
+Setting up vars
+Loading GIS data
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Boundaries points
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+Calculating cache
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskdba74a51-cc9a-4516-b6ac-b675a8601183/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5091"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Setting up vars
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+Loading GIS data
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask5c2b24f1-083d-4f8e-a8be-7d7ce5bb2f81/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5092"
+Calculating R data
+... extracting real travels
+Boundaries points
+... boundaries probas
+... getting kernel densities
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask054b3702-98e6-4fdb-b0db-ae9cdabdb13c/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5093"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask237b2b81-9a3e-4190-a9ef-c1d128538c25/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5094"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 8895.673684610845
+Ellapsed time : 420.993 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: 9905.039171424256
+Ellapsed time : 405.263 sec
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaske7799485-6bc1-49ca-a62b-97e1e9a7e1c4/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5097"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask2cc7c603-75b2-453f-b6b8-5bcfb71c7943/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5098"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 10293.038488139262
+Ellapsed time : 434.652 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask11ca25a4-d268-4e85-8a62-6d1d4d09b03c/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5100"
+observer: 9999.878541929193
+Ellapsed time : 446.859 sec
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 9951.810472782712
+Ellapsed time : 489.377 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+Setting up vars
+Loading GIS data
+observer: 11514.36455961647
+Ellapsed time : 436.267 sec
+Boundaries points
+Calculating cache
+observer: 10555.039051650127
+Ellapsed time : 430.495 sec
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+observer: 9555.376166844791
+Ellapsed time : 453.403 sec
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskbfe311e6-ceb3-480e-b0e0-ea8bbc87136e/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5105"
+Setting up vars
+Loading GIS data
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask619f09aa-edce-420f-897b-99101fa723d4/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5110"
+observer: 10666.615873513465
+Ellapsed time : 418.473 sec
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 9454.148995167054
+Ellapsed time : 432.808 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask35c40074-fe8a-4618-85d7-60aec1f798b7/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5113"
+Calculating R data
+... extracting real travels
+Setting up vars
+... boundaries probas
+Loading GIS data
+... getting kernel densities
+Boundaries points
+Calculating cache
+Setting up vars
+Loading GIS data
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask9c26dc12-296a-49fd-bb23-69a029ab4513/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5114"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 9849.178583754177
+Ellapsed time : 520.125 sec
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask947c8452-2141-4668-926d-a95b0db59b19/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5116"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaska00ba37f-ee01-4bf8-949e-c6153aa2de32/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5117"
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask4f3ffa87-0f8d-4053-99ba-489324c827cf/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5118"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskd3bda090-949d-41f8-ab9d-97787fc6e2fd/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5119"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 9967.418756781688
+Ellapsed time : 515.364 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskadcae3ce-07f8-434d-ab12-d9cde5d0a5b2/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5121"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 9153.757334556432
+Ellapsed time : 477.214 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: 10258.008656912887
+Ellapsed time : 472.706 sec
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask685d712f-d8d8-4260-afeb-e4bfa6315b9b/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5201"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaska218aaee-7242-4fdc-a9cb-2c3dd6617832/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5202"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 10195.584211564414
+Ellapsed time : 461.943 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: 10516.707733614236
+Ellapsed time : 439.837 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask7c86992b-5135-4313-9165-c4297718428d/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5206"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 10332.677764077094
+Ellapsed time : 441.424 sec
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask3f5a591b-2525-466c-b53d-ef7ff05272f9/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5208"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: 10864.948805153263
+Ellapsed time : 473.03 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask1ba26809-3a4a-493d-8a84-8e2db5209f7c/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5212"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskd02a15e5-3d19-4f96-9836-baa61bb02ee7/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5216"
+observer: 10843.194245977205
+Ellapsed time : 390.06 sec
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 10415.45728866211
+Ellapsed time : 420.727 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+observer: 9828.77541735558
+Ellapsed time : 481.059 sec
+Calculating cache
+observer: 10243.649417699036
+Ellapsed time : 475.193 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+Setting up vars
+Loading GIS data
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask14e78d0f-52c0-4c51-b3d7-58d1a41b70bc/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5221"
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+Calculating R data
+... extracting real travels
+observer: 10015.584049664774
+Ellapsed time : 445.317 sec
+... boundaries probas
+Boundaries points
+... getting kernel densities
+Calculating cache
+Setting up vars
+Loading GIS data
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaske36b9e0e-66da-4d95-945a-2389ea38608a/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5223"
+Boundaries points
+Calculating cache
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask5174406e-d5ff-4040-a36d-4eec15d77129/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5224"
+Calculating R data
+... extracting real travels
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... boundaries probas
+... getting kernel densities
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask7bf2956d-9ad5-459c-b571-3824623e9b20/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5225"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 9993.717954922733
+Ellapsed time : 420.803 sec
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask325c82cd-f3eb-4ea1-b80a-a7abcb0a6c49/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5227"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskd1517f4c-ef11-4d80-acd1-6e5dd3549362/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5228"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 9558.347689935077
+Ellapsed time : 412.329 sec
+Setting up vars
+Loading GIS data
+observer: 8976.861023552074
+Ellapsed time : 399.16 sec
+Boundaries points
+Calculating cache
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask0c5639ee-b6f9-44b0-9a7e-c413bb69ee54/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5235"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTaskb18e491b-6efd-4cb6-b32d-b0c172d37b68/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5236"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 10277.128078364596
+Ellapsed time : 400.787 sec
+Setting up vars
+Loading GIS data
+Boundaries points
+Calculating cache
+observer: "Setting up parameters..."
+observer: "edges : 2086"
+Setting up R interface
+... R functions
+... connected to rserve
+observer: 10584.001919302562
+Ellapsed time : 416.357 sec
+... loading R data
+observer: "getStationsCharacs(\"/home/juste/.openmole/grid.parisgeo.cnrs.fr/.tmp/c633687d-895c-47cc-9bdc-ee78336e5c78/externalTask91833176-30f1-495d-b1dc-105f310f6904/ABM/data\",\"stations_chatelet\")"
+observer: "/tmp/Rserv/conn5238"
+Calculating R data
+... extracting real travels
+... boundaries probas
+... getting kernel densities
+observer: 11284.980963791968
+Ellapsed time : 430.358 sec
+observer: 11321.594145665267
+Ellapsed time : 418.958 sec
+observer: 11250.495064044117
+Ellapsed time : 423.927 sec
+observer: 11070.388824305051
+Ellapsed time : 390.419 sec
+observer: 10393.142449580959
+Ellapsed time : 384.157 sec
+observer: 11096.42390619995
+Ellapsed time : 443.794 sec
+observer: 11017.836251876426
+Ellapsed time : 437.985 sec
+observer: 10544.237253397157
+Ellapsed time : 462.137 sec
+observer: 11238.650511160367
+Ellapsed time : 380.434 sec
+observer: 10273.470067744887
+Ellapsed time : 408.701 sec
+observer: 10515.317994272735
+Ellapsed time : 395.902 sec
+res6: org.openmole.core.workflow.mole.MoleExecution = org.openmole.core.workflow.mole.MoleExecution@4da6546a
+Ellapsed Time is 3206.506

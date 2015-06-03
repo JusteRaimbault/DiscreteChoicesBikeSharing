@@ -7,7 +7,7 @@
 
 to setup-openmole-experiment [walking betawaiting betamoving information kernel]
   show "Setting up parameters..."
-  
+  show (word "radius :" walking " ; betaw : " betawaiting " ; betamoving : " betamoving " ; info : " information " ; sigma : " kernel)  
   show (word "edges : " count edges)
   
   set kernel-size kernel
