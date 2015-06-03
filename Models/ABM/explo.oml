@@ -28,8 +28,8 @@ val replication = Val[Int]
   (walking in (300.0 to 300.0 by 1)) x
     (betawaiting in (-0.1 to 0.0 by 0.02)) x
     (betamoving in (-0.25 to -0.1 by 0.03)) x
-    (information in (20.0 to 60.0 by 20.0)) x
-    (kernel in (50.0 to 250.0 by 50.0)) x
+    (information in (20.0 to 40.0 by 20.0)) x
+    (kernel in (100.0 to 300.0 by 100.0)) x
     (replication in (UniformDistribution[Int]() take 5))
   )
 //--------------------------------------------------------
