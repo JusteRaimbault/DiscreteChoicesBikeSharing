@@ -90,7 +90,11 @@ val h = AppendToCSVFileHook("res_oml/"+(new java.util.Date()).toString().replace
 val startTime = System.currentTimeMillis
 
 // environement
+<<<<<<< HEAD
 val env = LocalEnvironment(12)
+=======
+val env = LocalEnvironment(3)
+>>>>>>> origin/master
 
 logger.level("FINE")
 
