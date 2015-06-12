@@ -25,6 +25,9 @@ to setup-r-functions
   ;output-print rserve:get "list.files()"
   let pathroot (word pathdir:get-current pathdir:get-separator)
 
+  ;show rserve:get "installed.packages()"
+  ; issue when rserve run by different user eg root if user  
+
   rserve:eval (word "source(\"" pathroot "stats/NLFunctions.R\",chdir=TRUE)")
 end
 

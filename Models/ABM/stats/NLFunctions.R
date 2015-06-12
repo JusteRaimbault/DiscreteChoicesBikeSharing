@@ -1,7 +1,7 @@
 # functions called from NetLogo for setup and param
 
 
-
+library(sp)
 library(rgdal)
 
 
