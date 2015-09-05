@@ -37,15 +37,30 @@ val replication = Val[Int]
 
 //-------------------------------------------------------
 // FINE CALIB WITHOUT DC
- val exploration =  ExplorationTask(
+/* val exploration =  ExplorationTask(
   (walking in (100.0 to 300.0 by 100.0)) x
     (betawaiting in (0.0 to 0.0 by 1)) x
     (betamoving in (0.0 to 0.0 by 1)) x
     (information in (0.0 to 100.0 by 10.0)) x
     (kernel in (50.0 to 500.0 by 50.0)) x
     (replication in (UniformDistribution[Int]() take 10))
+  )*/
+//--------------------------------------------------------
+
+
+//-------------------------------------------------------
+// CONVERGENCE STUDY WITHOUT DC
+ val exploration =  ExplorationTask(
+  (walking in (100.0 to 300.0 by 200.0)) x
+    (betawaiting in (0.0 to 0.0 by 1)) x
+    (betamoving in (0.0 to 0.0 by 1)) x
+    (information in (25.0 to 75.0 by 50.0)) x
+    (kernel in (100.0 to 500.0 by 400.0)) x
+    (replication in (UniformDistribution[Int]() take 500))
   )
 //--------------------------------------------------------
+
+
 
 
 
@@ -107,7 +122,7 @@ val h = AppendToCSVFileHook("res_oml/"+(new java.util.Date()).toString().replace
 val startTime = System.currentTimeMillis
 
 // environement
-val env = LocalEnvironment(12)
+val env = LocalEnvironment(16)
 logger.level("FINE")
 
 val exec = exploration -< (model on env hook h) start
